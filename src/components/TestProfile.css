@@ -1,0 +1,8 @@
+.test-profile {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 8px;
+  background: lemonchiffon;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+}
