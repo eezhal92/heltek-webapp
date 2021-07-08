@@ -27,8 +27,6 @@ export type ManagementPermissions =
   | BookingManagmentPermission
   | FacilityManagementPermission;
 
-  console.log(Object.values(UserManagementPermission))
-
 export const getManagementPermissionKeys = () : ManagementPermissions[] => {
   const permissions: ManagementPermissions[] = [];
   return [

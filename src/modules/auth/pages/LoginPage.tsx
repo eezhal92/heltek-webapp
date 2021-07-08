@@ -1,5 +1,6 @@
 import { AxiosError } from 'axios';
 import React, { useCallback, useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import { LoginForm } from '../components';
 import { LoginFormErrors } from '../components/LoginForm';
 import { useAuth } from '../hooks';
@@ -28,6 +29,10 @@ const LoginPage : React.FC<{}> = () => {
         setErrMessage(err.response.data.message);
       });
   }, [auth]);
+
+  if (!auth.user.isNil()) {
+    return <Redirect to={{ pathname: '/dashboard' }} />
+  }
 
   return (
     <div>
